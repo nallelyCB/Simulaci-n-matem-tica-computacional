@@ -1,0 +1,70 @@
+---
+title: "chlamy internalizacionRo"
+author: "Nallely Borbolla"
+date: "11 de junio de 2019"
+output: html_document
+---
+
+```{r}
+direccion="C:/Users/xavy28/Dropbox/TESIS/ProgramasR/Toxoplasma/"
+```
+
+## Ecuaciones
+
+$$\dot{H_0}=\phi -\beta_C H_0E_b-\epsilon_c H_0-\mu_0H_0$$
+ $$\dot{E_1}=\beta_C H_0E_b+\epsilon_c H_0-\alpha_1E_1$$
+ $$\dot{E_2}=\theta\alpha_1E_1-\alpha_2E_2$$
+  $$\dot{E_3}=\alpha_2E_2-\delta E_3$$
+  $$\dot{E_b}=\delta E_3 N_1-\beta_c E_b H_0-\mu_e Eb $$
+  
+`````{r}
+library(deSolve)
+```
+##Definimos la funcion:
+Ho= Celulas no infectadas
+En=Celulas en los diferentes estados de infección por Chlamydia trachomatis 
+
+```{r}
+Chlamydia <- function(t, state, parameters) {
+  with(as.list(c(state, parameters)), {
+    dho <- phi-beta*ho*Eb-mo*ho-epsilon_C*ho
+    dE1 <- epsilon_C*ho+beta*ho*Eb-alpha1*E1
+    dE2 <- theta*alpha1*E1-alpha2*E2
+    dE3 <- alpha2*E2-delta*E3
+    dEb <- delta*n1*E3- beta*ho*Eb-me*Eb
+    list(c(dho, dE1, dE2,dE3,dEb))
+  })
+}
+```
+ 
+
+```{r}
+parameters <- c(beta =0.04, phi= 10, alpha1 =1/2 , alpha2 =1/12,delta =1/42,theta = 0.9,n1=636, mo=1/48,me=1/10, epsilon_C=6)
+state <- c(ho = 3000,E1= 0, E2= 0,E3=0,Eb = 1)
+times <- seq(0,200, by = 1)
+out <- ode(y = state, times = times, func = Chlamydia, parms = parameters)
+```
+
+> Para los parametros consideramos:
+  
+ delta=lisis (42 h.p.i.) el periodo más corto en el cual, Chlamydia lisa a la célula. Además, se consideró una tasa de mortalidad natural de las celulas hospederas de 48 horas que es lo que se estima para células epiteliales.
+  
+  theta= buena asociación con el centrosoma 90%
+
+```{r}
+#pdf(paste0(direccion, "Resultados Chlamydia trachomatisF.pdf"))
+plot(out,col="blue")
+plot(out[,"Eb"],pch = ".")
+dev.off()
+```
+
+
+```{r}
+plot(out,col="blue")
+plot(out[,"Eb"],out[,"ho"],pch = ".")
+```
+
+
+#```{r}
+#head(out,n=24)
+#```
