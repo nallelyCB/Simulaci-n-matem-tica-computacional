@@ -22,7 +22,7 @@ library(deSolve)
 ```
 ##Definimos la funcion:
 Ho= Celulas no infectadas
-En=Celulas en los diferentes estados de infecciÛn por Chlamydia trachomatis 
+En=Celulas en los diferentes estados de infecci√≥n por Chlamydia trachomatis 
 
 ```{r}
 Chlamydia <- function(t, state, parameters) {
@@ -41,15 +41,15 @@ Chlamydia <- function(t, state, parameters) {
 ```{r}
 parameters <- c(beta =0.04, phi= 10, alpha1 =1/2 , alpha2 =1/12,delta =1/42,theta = 0.9,n1=636, mo=1/48,me=1/10, epsilon_C=6)
 state <- c(ho = 3000,E1= 0, E2= 0,E3=0,Eb = 1)
-times <- seq(0,200, by = 1)
+times <- seq(0,350, by = 1)
 out <- ode(y = state, times = times, func = Chlamydia, parms = parameters)
 ```
 
 > Para los parametros consideramos:
   
- delta=lisis (42 h.p.i.) el periodo m·s corto en el cual, Chlamydia lisa a la cÈlula. Adem·s, se considerÛ una tasa de mortalidad natural de las celulas hospederas de 48 horas que es lo que se estima para cÈlulas epiteliales.
+ delta=lisis (42 h.p.i.) el periodo m√°s corto en el cual, Chlamydia lisa a la c√©lula. Adem√°s, se consider√≥ una tasa de mortalidad natural de las celulas hospederas de 48 horas que es lo que se estima para c√©lulas epiteliales.
   
-  theta= buena asociaciÛn con el centrosoma 90%
+  theta= buena asociaci√≥n con el centrosoma 90%
 
 ```{r}
 #pdf(paste0(direccion, "Resultados Chlamydia trachomatisF.pdf"))
