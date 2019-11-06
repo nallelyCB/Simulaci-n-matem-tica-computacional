@@ -43,14 +43,14 @@ Toxoplasma <- function(t, state, parameters) {
 ```{r}
 parameters <- c(beta =0.02, phi= 10, iota1 = 1/1.5, iota2 =1/6, gama=1/42,psi = 0.85, mo=1/48,mP=1/6, epsilon=60, rp=1/8, NP=64)
 state <- c(ho = 3000, P1 = 0, P2 = 0,P3=0, P= 1)
-times <- seq(0,200, by = 1)
+times <- seq(0,350, by = 1)
 out <- ode(y = state, times = times, func = Toxoplasma, parms = parameters)
 ```
 
 > Para los parametros consideramos:
 
 
-*La asociación con el con el centrosoma/ adquisición de nutrientes. Se considera con un 85% que es lo reportado experimentalmente.(Isabell Coppens & Julia D. Romano)
+*La asociaciÃ³n con el con el centrosoma/ adquisiciÃ³n de nutrientes. Se considera con un 85% que es lo reportado experimentalmente.(Isabell Coppens & Julia D. Romano)
 
 ```{r}
 #pdf(paste0(direccion, "Grafica.Resultado.ToxoplasmaF.pdf"))
