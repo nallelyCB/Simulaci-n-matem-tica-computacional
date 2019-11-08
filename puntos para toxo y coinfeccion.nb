@@ -1,0 +1,682 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     25374,        674]
+NotebookOptionsPosition[     24967,        655]
+NotebookOutlinePosition[     25324,        671]
+CellTagsIndexPosition[     25281,        668]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7807633568748713`*^9, 3.780763357014976*^9}, {
+  3.780764304418603*^9, 3.7807643045850143`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"solT", "=", 
+  RowBox[{"FullSimplify", "[", "\[IndentingNewLine]", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"\[Phi]", "\[Minus]", 
+           RowBox[{"\[Beta]1", "*", "H", "*", "P"}]}], "\[Minus]", 
+          RowBox[{"\[Epsilon]1", "*", "H"}]}], "-", 
+         RowBox[{
+          SubscriptBox["\[Mu]", "0"], "*", "H"}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Epsilon]1", "*", "H"}], "+", 
+         RowBox[{"\[Beta]1", "*", "H", "*", "P"}], "-", 
+         RowBox[{
+          SubscriptBox["\[Iota]", "1"], "*", 
+          SubscriptBox["P", "1"]}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Psi]1", "*", 
+          SubscriptBox["\[Iota]", "1"], "*", 
+          SubscriptBox["P", "1"]}], "-", 
+         RowBox[{
+          SubscriptBox["\[Iota]", "2"], "*", 
+          SubscriptBox["P", "2"]}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Iota]", "2"], "*", 
+          SubscriptBox["P", "2"]}], "-", " ", 
+         RowBox[{"\[Gamma]", "*", 
+          SubscriptBox["P", "3"]}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Gamma]", "*", 
+          SubscriptBox["P", "3"], "*", "PF"}], "-", 
+         RowBox[{"\[Beta]1", "*", "H", "*", "P"}], "-", 
+         RowBox[{"\[Mu]1", "*", "P"}]}], "\[Equal]", "0"}]}], " ", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"H", ",", "P", ",", 
+       SubscriptBox["P", "1"], ",", 
+       SubscriptBox["P", "2"], ",", 
+       SubscriptBox["P", "3"]}], "}"}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.7797125509765315`*^9, {3.779712788827134*^9, 3.7797128162647038`*^9}, {
+   3.7797130947715626`*^9, 3.77971310680025*^9}, 3.7797131461224995`*^9, {
+   3.7800540532240214`*^9, 3.780054078461465*^9}, {3.7800542011173463`*^9, 
+   3.7800542140720873`*^9}, {3.780054474133032*^9, 3.780054486754754*^9}, {
+   3.7804118459320283`*^9, 3.7804119936414766`*^9}, {3.7804128466921983`*^9, 
+   3.7804128586028795`*^9}, {3.7804181095531807`*^9, 
+   3.7804181160725536`*^9}, {3.7804181509415483`*^9, 3.780418176985038*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"H", "\[Rule]", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"2", " ", "\[Mu]1", " ", "\[Phi]"}], ")"}], "/", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "-", 
+         RowBox[{"\[Beta]1", " ", "\[Phi]"}], "+", 
+         RowBox[{"PF", " ", "\[Beta]1", " ", "\[Phi]", " ", "\[Psi]1"}], "+", 
+         RowBox[{"\[Mu]1", " ", 
+          SubscriptBox["\[Mu]", "0"]}], "+", 
+         RowBox[{"\[Sqrt]", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+               RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+               RowBox[{"\[Mu]1", " ", 
+                SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+            RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+             RowBox[{"(", 
+              RowBox[{"\[Epsilon]1", "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"1", "-", 
+                  RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ",", 
+     RowBox[{"P", "\[Rule]", 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", " ", "\[Beta]1", " ", "\[Mu]1"}]], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "\[Epsilon]1"}], " ", "\[Mu]1"}], "-", 
+         RowBox[{"\[Beta]1", " ", "\[Phi]"}], "+", 
+         RowBox[{"PF", " ", "\[Beta]1", " ", "\[Phi]", " ", "\[Psi]1"}], "-", 
+         RowBox[{"\[Mu]1", " ", 
+          SubscriptBox["\[Mu]", "0"]}], "+", 
+         RowBox[{"\[Sqrt]", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox[
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+               RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], "+", 
+                  RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+               RowBox[{"\[Mu]1", " ", 
+                SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+            RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+             RowBox[{"(", 
+              RowBox[{"\[Epsilon]1", "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"1", "-", 
+                  RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}], 
+        ")"}]}]}], ",", 
+     RowBox[{
+      SubscriptBox["P", "1"], "\[Rule]", 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", " ", "\[Beta]1", " ", 
+         SubscriptBox["\[Iota]", "1"], " ", 
+         RowBox[{"(", 
+          RowBox[{"\[Epsilon]1", "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+            SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Mu]1", " ", 
+          SubscriptBox["\[Mu]", "0"], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[Epsilon]1", "+", 
+            SubscriptBox["\[Mu]", "0"]}], ")"}]}], "+", 
+         RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "\[Epsilon]1"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "-", 
+               RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+             SubscriptBox["\[Mu]", "0"]}]}], ")"}]}], "-", 
+         RowBox[{
+          SubscriptBox["\[Mu]", "0"], " ", 
+          RowBox[{"\[Sqrt]", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+                RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", 
+                   RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+                RowBox[{"\[Mu]1", " ", 
+                 SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+             RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+              RowBox[{"(", 
+               RowBox[{"\[Epsilon]1", "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", 
+                   RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                 SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}]}], 
+        ")"}]}]}], ",", 
+     RowBox[{
+      SubscriptBox["P", "2"], "\[Rule]", 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", " ", "\[Beta]1", " ", 
+         SubscriptBox["\[Iota]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{"\[Epsilon]1", "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+            SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]], 
+       RowBox[{"\[Psi]1", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Mu]1", " ", 
+           SubscriptBox["\[Mu]", "0"], " ", 
+           RowBox[{"(", 
+            RowBox[{"\[Epsilon]1", "+", 
+             SubscriptBox["\[Mu]", "0"]}], ")"}]}], "+", 
+          RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "\[Epsilon]1"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", 
+                RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+              SubscriptBox["\[Mu]", "0"]}]}], ")"}]}], "-", 
+          RowBox[{
+           SubscriptBox["\[Mu]", "0"], " ", 
+           RowBox[{"\[Sqrt]", 
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+                 RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+                 RowBox[{"\[Mu]1", " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+              RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+               RowBox[{"(", 
+                RowBox[{"\[Epsilon]1", "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"1", "-", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}]}], 
+         ")"}]}]}]}], ",", 
+     RowBox[{
+      SubscriptBox["P", "3"], "\[Rule]", 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", " ", "\[Beta]1", " ", "\[Gamma]", " ", 
+         RowBox[{"(", 
+          RowBox[{"\[Epsilon]1", "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+            SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]], 
+       RowBox[{"\[Psi]1", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Mu]1", " ", 
+           SubscriptBox["\[Mu]", "0"], " ", 
+           RowBox[{"(", 
+            RowBox[{"\[Epsilon]1", "+", 
+             SubscriptBox["\[Mu]", "0"]}], ")"}]}], "+", 
+          RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "\[Epsilon]1"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", 
+                RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+              SubscriptBox["\[Mu]", "0"]}]}], ")"}]}], "-", 
+          RowBox[{
+           SubscriptBox["\[Mu]", "0"], " ", 
+           RowBox[{"\[Sqrt]", 
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+                 RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+                 RowBox[{"\[Mu]1", " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+              RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+               RowBox[{"(", 
+                RowBox[{"\[Epsilon]1", "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"1", "-", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}]}], 
+         ")"}]}]}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"H", "\[Rule]", 
+      RowBox[{"-", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "-", 
+           RowBox[{"\[Beta]1", " ", "\[Phi]"}], "+", 
+           RowBox[{"PF", " ", "\[Beta]1", " ", "\[Phi]", " ", "\[Psi]1"}], 
+           "+", 
+           RowBox[{"\[Mu]1", " ", 
+            SubscriptBox["\[Mu]", "0"]}], "+", 
+           RowBox[{"\[Sqrt]", 
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+                 RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+                 RowBox[{"\[Mu]1", " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+              RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+               RowBox[{"(", 
+                RowBox[{"\[Epsilon]1", "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"1", "-", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}], ")"}],
+          "/", 
+         RowBox[{"(", 
+          RowBox[{"2", " ", "\[Beta]1", " ", 
+           RowBox[{"(", 
+            RowBox[{"\[Epsilon]1", "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", 
+                RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+              SubscriptBox["\[Mu]", "0"]}]}], ")"}]}], ")"}]}], ")"}]}]}], 
+     ",", 
+     RowBox[{"P", "\[Rule]", 
+      RowBox[{"-", 
+       RowBox[{
+        FractionBox["1", 
+         RowBox[{"2", " ", "\[Beta]1", " ", "\[Mu]1"}]], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+          RowBox[{"\[Beta]1", " ", "\[Phi]"}], "-", 
+          RowBox[{"PF", " ", "\[Beta]1", " ", "\[Phi]", " ", "\[Psi]1"}], "+", 
+          RowBox[{"\[Mu]1", " ", 
+           SubscriptBox["\[Mu]", "0"]}], "+", 
+          RowBox[{"\[Sqrt]", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+                RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", 
+                   RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+                RowBox[{"\[Mu]1", " ", 
+                 SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+             RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+              RowBox[{"(", 
+               RowBox[{"\[Epsilon]1", "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", 
+                   RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                 SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}], 
+         ")"}]}]}]}], ",", 
+     RowBox[{
+      SubscriptBox["P", "1"], "\[Rule]", 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", " ", "\[Beta]1", " ", 
+         SubscriptBox["\[Iota]", "1"], " ", 
+         RowBox[{"(", 
+          RowBox[{"\[Epsilon]1", "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+            SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[Mu]1", " ", 
+          SubscriptBox["\[Mu]", "0"], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[Epsilon]1", "+", 
+            SubscriptBox["\[Mu]", "0"]}], ")"}]}], "+", 
+         RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"2", " ", "\[Epsilon]1"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"1", "-", 
+               RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+             SubscriptBox["\[Mu]", "0"]}]}], ")"}]}], "+", 
+         RowBox[{
+          SubscriptBox["\[Mu]", "0"], " ", 
+          RowBox[{"\[Sqrt]", 
+           RowBox[{"(", 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+                RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"-", "1"}], "+", 
+                   RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+                RowBox[{"\[Mu]1", " ", 
+                 SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+             RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+              RowBox[{"(", 
+               RowBox[{"\[Epsilon]1", "+", 
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{"1", "-", 
+                   RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                 SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}]}], 
+        ")"}]}]}], ",", 
+     RowBox[{
+      SubscriptBox["P", "2"], "\[Rule]", 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", " ", "\[Beta]1", " ", 
+         SubscriptBox["\[Iota]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{"\[Epsilon]1", "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+            SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]], 
+       RowBox[{"\[Psi]1", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Mu]1", " ", 
+           SubscriptBox["\[Mu]", "0"], " ", 
+           RowBox[{"(", 
+            RowBox[{"\[Epsilon]1", "+", 
+             SubscriptBox["\[Mu]", "0"]}], ")"}]}], "+", 
+          RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "\[Epsilon]1"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", 
+                RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+              SubscriptBox["\[Mu]", "0"]}]}], ")"}]}], "+", 
+          RowBox[{
+           SubscriptBox["\[Mu]", "0"], " ", 
+           RowBox[{"\[Sqrt]", 
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+                 RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+                 RowBox[{"\[Mu]1", " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+              RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+               RowBox[{"(", 
+                RowBox[{"\[Epsilon]1", "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"1", "-", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}]}], 
+         ")"}]}]}]}], ",", 
+     RowBox[{
+      SubscriptBox["P", "3"], "\[Rule]", 
+      RowBox[{
+       FractionBox["1", 
+        RowBox[{"2", " ", "\[Beta]1", " ", "\[Gamma]", " ", 
+         RowBox[{"(", 
+          RowBox[{"\[Epsilon]1", "+", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"1", "-", 
+              RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+            SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]], 
+       RowBox[{"\[Psi]1", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Mu]1", " ", 
+           SubscriptBox["\[Mu]", "0"], " ", 
+           RowBox[{"(", 
+            RowBox[{"\[Epsilon]1", "+", 
+             SubscriptBox["\[Mu]", "0"]}], ")"}]}], "+", 
+          RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "\[Epsilon]1"}], "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "-", 
+                RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+              SubscriptBox["\[Mu]", "0"]}]}], ")"}]}], "+", 
+          RowBox[{
+           SubscriptBox["\[Mu]", "0"], " ", 
+           RowBox[{"\[Sqrt]", 
+            RowBox[{"(", 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"\[Epsilon]1", " ", "\[Mu]1"}], "+", 
+                 RowBox[{"\[Beta]1", " ", "\[Phi]", " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"-", "1"}], "+", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}]}], "+", 
+                 RowBox[{"\[Mu]1", " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}], "2"], "+", 
+              RowBox[{"4", " ", "\[Beta]1", " ", "\[Mu]1", " ", "\[Phi]", " ", 
+               RowBox[{"(", 
+                RowBox[{"\[Epsilon]1", "+", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"1", "-", 
+                    RowBox[{"PF", " ", "\[Psi]1"}]}], ")"}], " ", 
+                  SubscriptBox["\[Mu]", "0"]}]}], ")"}]}]}], ")"}]}]}]}], 
+         ")"}]}]}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.78041818629757*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"solC2", "=", 
+  RowBox[{"FullSimplify", "[", "\[IndentingNewLine]", 
+   RowBox[{"Solve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"\[Phi]", "\[Minus]", 
+             RowBox[{"\[Beta]1", "*", "H", "*", "P"}]}], "\[Minus]", 
+            RowBox[{"\[Beta]2", "*", "H", "*", "C"}]}], "\[Minus]", 
+           RowBox[{"\[Epsilon]1", "*", "H"}]}], "\[Minus]", 
+          RowBox[{"\[Epsilon]2", "*", "H"}]}], "-", 
+         RowBox[{
+          SubscriptBox["\[Mu]", "0"], "*", "H"}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Epsilon]1", "*", "H"}], "+", 
+         RowBox[{"\[Beta]1", "*", "H", "*", "P"}], "-", 
+         RowBox[{
+          SubscriptBox["\[Iota]", "1"], "*", 
+          SubscriptBox["P", "1"]}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Psi]2", "*", 
+          SubscriptBox["\[Iota]", "1"], "*", 
+          SubscriptBox["P", "1"]}], "-", 
+         RowBox[{
+          SubscriptBox["\[Iota]", "2"], "*", 
+          SubscriptBox["P", "2"]}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Iota]", "2"], "*", 
+          SubscriptBox["P", "2"]}], "-", " ", 
+         RowBox[{"\[Gamma]", "*", 
+          SubscriptBox["P", "3"]}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Gamma]", "*", 
+          SubscriptBox["P", "3"], "*", "PF"}], "-", 
+         RowBox[{"\[Beta]1", "*", "H", "*", "P"}], "-", 
+         RowBox[{"\[Mu]1", "*", "P"}]}], "\[Equal]", "0"}], " ", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Epsilon]2", "*", "H"}], "+", 
+         RowBox[{"\[Beta]2", "*", "H", "*", "C"}], "-", 
+         RowBox[{
+          SubscriptBox["\[Alpha]", "1"], "*", 
+          SubscriptBox["C", "1"]}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Theta]2", "*", 
+          SubscriptBox["\[Alpha]", "1"], "*", 
+          SubscriptBox["C", "1"]}], "-", 
+         RowBox[{
+          SubscriptBox["\[Alpha]", "2"], "*", 
+          SubscriptBox["C", "2"]}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          SubscriptBox["\[Alpha]", "2"], "*", 
+          SubscriptBox["C", "2"]}], "-", " ", 
+         RowBox[{"\[Delta]", "*", 
+          SubscriptBox["C", "3"]}]}], "\[Equal]", "0"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\[Delta]", "*", 
+          SubscriptBox["C", "3"], "*", "N"}], "-", 
+         RowBox[{"\[Beta]2", "*", "H", "*", "C"}], "-", 
+         RowBox[{"\[Mu]2", "*", "C"}]}], "\[Equal]", "0"}]}], " ", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"H", ",", "P", ",", 
+       SubscriptBox["P", "1"], ",", 
+       SubscriptBox["P", "2"], ",", 
+       SubscriptBox["P", "3"], ",", "C", ",", 
+       SubscriptBox["C", "1"], ",", 
+       SubscriptBox["C", "2"], ",", 
+       SubscriptBox["C", "3"]}], "}"}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.780418341464445*^9, 3.7804186378363967`*^9}, {
+  3.7804186889493203`*^9, 3.780418698177848*^9}, {3.7804187325398135`*^9, 
+  3.780418735220967*^9}, {3.780418876575052*^9, 3.7804188774211*^9}}]
+},
+WindowSize->{1618, 1011},
+WindowMargins->{{111, Automatic}, {Automatic, 15}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 145, 2, 32, "Input"],
+Cell[CellGroupData[{
+Cell[728, 26, 2249, 55, 54, "Input"],
+Cell[2980, 83, 18697, 482, 394, "Output"]
+}, Open  ]],
+Cell[21692, 568, 3271, 85, 75, "Input"]
+}
+]
+*)
+
